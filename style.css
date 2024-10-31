@@ -107,7 +107,7 @@ html {
 @media screen and (max-width: 600px) {
     #mvd {
         max-width: 400px; /* максималдуу кенендик 400px */
-        margin: 0 auto; /* борборго жайгаштыруу */
+        margin: 100px auto; /* борборго жайгаштыруу */
     
     }
 
