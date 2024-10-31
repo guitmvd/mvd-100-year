@@ -1,6 +1,8 @@
 'use strict';
 console.clear();
 
+
+
 // This is a prime example of what starts out as a simple project
 // and snowballs way beyond its intended size. It's a little clunky
 // reading/working on this single file, but here it is anyways :)
@@ -222,6 +224,8 @@ if (!IS_HEADER) {
 // Actions
 // ---------
 
+
+
 function togglePause(toggle) {
 	const paused = store.state.paused;
 	let newValue;
@@ -260,6 +264,7 @@ function updateConfig(nextConfig) {
 	
 	configDidUpdate();
 }
+
 
 // Map config to various properties & apply side effects
 function configDidUpdate() {
@@ -418,7 +423,7 @@ function renderApp(state) {
 	appNodes.canvasContainer.classList.toggle('blur', state.menuOpen);
 	appNodes.menu.classList.toggle('hide', !state.menuOpen);
 	appNodes.finaleModeFormOption.style.opacity = state.config.autoLaunch ? 1 : 0.32;
-	
+
 	appNodes.quality.value = state.config.quality;
 	appNodes.shellType.value = state.config.shell;
 	appNodes.shellSize.value = state.config.size;
@@ -449,6 +454,7 @@ function handleStateChange(state, prevState) {
 	if (canPlaySound !== canPlaySoundPrev) {
 		if (canPlaySound) {
 			soundManager.resumeAll();
+            
 		} else {
 			soundManager.pauseAll();
 		}
@@ -845,6 +851,7 @@ function init() {
 	
 	// Apply initial config
 	configDidUpdate();
+    
 }
 
 
