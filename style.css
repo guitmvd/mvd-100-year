@@ -3,17 +3,133 @@
     padding: 0;
 }
 
+html {
+    position: relative;
+}
+
 #mvd {
-    width: auto;
-    background: #e0f0f7;
-    padding: 50px 0;
+    position: absolute;
+    top: 42px;
+    z-index: 99;
+    /* background: #e0f0f7; */
+    opacity: 0; /* башында көрүнбөйт */
+    /* animation: head 3s alternate ease-in-out; */
+}
+
+@keyframes head {
+    0% {
+      transform: translateY(900px);
+    }
+  }
+
+.hidden {
+    display: none; /* башында көрүнбөгөн */
 }
 
 .mvd h1 {
-    padding: 50px 0;
+
+    color: black;
+    color: white;
+    padding: 30px 0 30px 0;
     font-size: 54px;
+    animation: myAnimup 2s ease 0s 1 normal forwards;
 }
+
+@keyframes myAnimup {
+    0% {
+      animation-timing-function: ease-in;
+      opacity: 0;
+      transform: translateY(-250px);
+    }
+  
+    38% {
+      animation-timing-function: ease-out;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  
+    55% {
+      animation-timing-function: ease-in;
+      transform: translateY(-65px);
+    }
+  
+    72% {
+      animation-timing-function: ease-out;
+      transform: translateY(0);
+    }
+  
+    81% {
+      animation-timing-function: ease-in;
+      transform: translateY(-28px);
+    }
+  
+    90% {
+      animation-timing-function: ease-out;
+      transform: translateY(0);
+    }
+  
+    95% {
+      animation-timing-function: ease-in;
+      transform: translateY(-8px);
+    }
+  
+    100% {
+      animation-timing-function: ease-out;
+      transform: translateY(0);
+    }
+  }
 
 .logo img {
     width: 550px;
+}
+
+.mvd-title {
+    color: white;
+    font-size: 64px;
+}
+
+.img {
+    position: relative;
+    animation: head 3s alternate ease-in-out;
+}
+
+.logo {
+    position: absolute;
+    z-index: 99;
+    top: 173px;
+    left: 563px;
+}
+
+.logo img {
+    width: 470px;
+}
+
+@media screen and (max-width: 600px) {
+    #mvd {
+        max-width: 400px; /* максималдуу кенендик 400px */
+        margin: 0 auto; /* борборго жайгаштыруу */
+    
+    }
+
+    .img {
+        animation: head 2s alternate ease-in-out;
+    }
+
+    .mvd h1 {
+        font-size: 18px; /* тексттин өлчөмүн кичирейтүү */
+        padding: 15px 0; /* жоондуктарды жөнгө салуу */
+        animation: myAnimup 2s ease 0s 1 normal forwards;
+    }
+
+    .img img{
+        width: 400px;
+        margin: 0 auto;
+    }
+
+    .logo img {
+        width: 100px; /* логонун ширетмесин экрандын кенендигине ылайыкташтыруу */
+        margin-left: -935px;
+        margin-top: -900px;
+        /* z-index: 999; */
+    }
 }
