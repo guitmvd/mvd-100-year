@@ -126,10 +126,14 @@ html {
         margin: 0 auto;
     }
 
+    .logo {
+       margin-top: -52px;
+       margin-left: 4px;
+    }
+
     .logo img {
-        width: 100px; /* логонун ширетмесин экрандын кенендигине ылайыкташтыруу */
+        width: 96px;
         margin-left: -935px;
         margin-top: -900px;
-        /* z-index: 999; */
     }
 }
